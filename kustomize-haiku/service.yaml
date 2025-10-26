@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: go-httpbin-haiku
+spec:
+  selector:
+    app.kubernetes.io/name: go-httpbin-haiku
+  ports:
+    - port: 80
+      targetPort: http
+      protocol: TCP
+      name: http
+      appProtocol: http
